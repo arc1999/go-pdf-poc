@@ -1,0 +1,396 @@
+<html>
+<head>
+    <!-- <title>Html df</title> -->
+    <style type="text/css">
+        body {
+            font-weight: 200;
+            font-size: 14px;
+        }
+        .header {
+            font-size: 20px;
+            font-weight: 100;
+            text-align: center;
+            color: #007cae;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: 100;
+            /* text-align: right;*/
+            padding: 10px 20px 0px 20px;
+        }
+        .title span {
+            color: #007cae;
+        }
+        .details {
+            padding: 10px 20px 0px 20px;
+            text-align: left !important;
+            /*margin-left: 40%;*/
+        }
+        .hrItem {
+            border: none;
+            height: 1px;
+            /* Set the hr color */
+            color: #333; /* old IE */
+            background-color: #fff; /* Modern Browsers */
+        }
+        @page {
+            margin: 10mm;
+        }
+
+        body {
+            font: 9pt sans-serif;
+            line-height: 1.3;
+
+            /* Avoid fixed header and footer to overlap page content */
+            margin-top: 100px;
+            margin-bottom: 50px;
+
+            padding-left: 46px;
+            padding-right: 44px;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            /* For testing */
+            background: yellow;
+            opacity: 0.5;
+        }
+
+        #footer {
+            border-top: 1px solid #d8d8d8;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+
+            /* font-size: 6pt; */
+            /* color: black; */
+            /* For testing */
+            font-size: large;
+            background: white;
+            /* opacity: 0.5; */
+        }
+        @page {
+            margin-top: 149px;
+            margin-left: 2px;
+            margin-bottom: 40px;
+            margin-right: 2px;
+            size: landscape;
+            counter-increment: page;
+
+            /* @bottom-right { */
+            padding-right: 20px;
+            content: "Page " counter(page);
+        }
+        .incrementClass:before {
+            counter-increment: page;
+        }
+        #pageNum:before {
+            content: counter(page);
+        }
+        .details-sec {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-between;
+
+            padding-bottom: 25px;
+            border-bottom: 1px solid #d8d8d8;
+        }
+        .details-medical {
+            background: rgba(116, 121, 251, 0.05);
+        }
+        .details-sec-medical {
+            /* display: inline-flex; */
+            width: 100%;
+            /* justify-content: space-between; */
+            padding-top: 16px;
+            padding-bottom: 25px;
+            /* border-bottom: 1px solid #d8d8d8; */
+        }
+        .dr-name {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #000000;
+
+            padding-bottom: 6px;
+        }
+        .patient-container {
+            padding-top: 16px;
+        }
+        .patient-name {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+
+            color: #000000;
+        }
+        .conslt-date {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+
+            color: #000000;
+        }
+        .patient-details {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            /* identical to box height */
+
+            color: #777777;
+        }
+        .patient-details-sec {
+            padding-top: 13px;
+        }
+        .patient-details-heading {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 28px;
+            /* or 175% */
+
+            color: #000000;
+        }
+
+        .heading {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height */
+
+            color: #000000;
+        }
+        .footer-text {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 12px;
+
+            color: #000000;
+        }
+        .footer-cont {
+            width: 35%;
+            color: #000000;
+
+            padding-top: 15px;
+        }
+    </style>
+    <script>
+        //   var vars = {};
+        //   var x = window.location.search.substring(1).split("&");
+        //   for (var i in x) {
+        //     var z = x[i].split("=", 2);
+        //     vars[z[0]] = unescape(z[1]);
+        //   }
+        //   document.getElementById("page").innerHTML = vars.page;
+        //   document.getElementById("topage").innerHTML = vars.topage;
+    </script>
+</head>
+
+<body>
+<div class="details-sec">
+    <div>
+        <div class="dr-name">Dr Arpit</div>
+        <div>designation</div>
+        <div>address1</div>
+        <div>address2</div>
+    </div>
+    <div>image</div>
+</div>
+
+<div class="patient-container details-sec">
+    <div class="patient-name">Patient Name:NImit</div>
+    <div class="conslt-date">Consultation Date: 16 Feb 2020</div>
+</div>
+
+<div class="details-sec patient-details-sec">
+    <div>
+        <div class="patient-details">Age</div>
+        <div>12</div>
+    </div>
+    <div>
+        <div class="patient-details">Height</div>
+        <div>12</div>
+    </div>
+    <div>
+        <div class="patient-details">Weight(Kg)</div>
+        <div>12</div>
+    </div>
+    <div>
+        <div class="patient-details">BMI</div>
+        <div>12</div>
+    </div>
+</div>
+<div class="details-medical">
+    <div class="details-sec-medical">
+        <div>
+            <label class="patient-details-heading"> Diagnosis: </label>he scope of
+            this document is limited to the information provided by the patient to
+            the Zyla team over the phone or Zyla app and should not be used for
+            medico legal purposes
+        </div>
+        <div>
+            <label class="patient-details-heading">Chief Complaint:</label>
+            he scope of this document is limited to the information provided by
+            the patient to the Zyla team over the phone or Zyla app and should not
+            be used for medico legal purposes
+        </div>
+        <div>
+            <label class="patient-details-heading">Reports:</label>he scope of
+            this document is limited to the information provided by the patient to
+            the Zyla team over the phone or Zyla app and should not be used for
+            medico legal purposes
+        </div>
+    </div>
+</div>
+<div class="details-sec-medical">
+    <div class="heading">Medicine Prescription</div>
+    <div>
+        he scope of this document is limited to the information provided by the
+        patient to the Zyla team over the phone or Zyla app and should not be
+        used for medico legal purposeshe scope of this document is limited to
+        the information provided by the patient to the Zyla team over the phone
+        or Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposes
+    </div>
+</div>
+
+<div class="details-sec-medical">
+    <div class="heading">Investigation:</div>
+    <div>
+        he scope of this document is limited to the information provided by the
+        patient to the Zyla team over the phone or Zyla app and should not be
+        used for medico legal purposeshe scope of this document is limited to
+        the information provided by the patient to the Zyla team over the phone
+        or Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposes
+    </div>
+</div>
+
+<div class="details-sec-medical">
+    <div class="heading">Other Instructions:</div>
+    <div>
+        he scope of this document is limited to the information provided by the
+        patient to the Zyla team over the phone or Zyla app and should not be
+        used for medico legal purposeshe scope of this document is limited to
+        the information provided by the patient to the Zyla team over the phone
+        or Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposeshe scope of this document is limited to the
+        information provided by the patient to the Zyla team over the phone or
+        Zyla app and should not be used for medico legal purposeshe scope of
+        this document is limited to the information provided by the patient to
+        the Zyla team over the phone or Zyla app and should not be used for
+        medico legal purposes
+    </div>
+</div>
+
+<!-- <div class='wrapper'>
+        <div class='header'>
+            <p class='title'>Invoice # </p>
+        </div>
+    <div> -->
+
+<!-- <header id="header">
+  <div class="incrementClass"></div>
+  <p class="rh"><i>Miranda v. Arizona</i> in Context</p>
+  <h2><i>Miranda v. Arizona</i> in Context</h2>
+  <span id="pageNum"></span>
+  Page <span id="page"></span> of
+  <span id="topage"></span>
+</header> -->
+
+{{/*<footer id="footer">*/}}
+{{/*    <div class="footer-cont">*/}}
+{{/*        <label class="footer-text"*/}}
+{{/*        >The scope of this document is limited to the information provided by*/}}
+{{/*            the patient to the Zyla team over the phone or Zyla app and should not*/}}
+{{/*            be used for medico legal purposes.</label*/}}
+{{/*        >*/}}
+{{/*    </div>*/}}
+
+{{/*    <!-- <p class="rh"><i>Miranda v. Arizona</i> in Context</p>*/}}
+{{/*    <h2><i>Miranda v. Arizona</i> in Context</h2>*/}}
+{{/*    <span id="pageNum"></span>*/}}
+{{/*    Page <span id="page"></span> of*/}}
+{{/*    <span id="topage"></span> -->*/}}
+{{/*    <!-- <h1>    <p>Page <span class="page"></span> of <span class="topage"></span></p></h1> -->*/}}
+{{/*</footer>*/}}
+</body>
+
+{{/*{{.value}}*/}}
+</html>
